@@ -8,6 +8,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <!-- font link -->
     <link rel="stylesheet" href="https://use.typekit.net/bqt3mtf.css">
@@ -15,6 +16,7 @@
 
 </head>
 <body>
+    <!-- header -->
     <header>
         <a href="index.html" class="header-logo">
             <img src="_src/web/logo.jpg" alt="logo">
@@ -22,13 +24,20 @@
 
         <nav>
             <ul>
-                <li><a href="#">about</a></li>
-                <li><a href="#">thingking</a></li>
-                <li><a href="#">project</a></li>
-                <li><a href="#">blog</a></li>
+                <li class="nav-active"><a href="about.html">about</a></li>
+                <li class="nav-active"><a href="#">thingking</a></li>
+                <li class="nav-active"><a href="#">project</a></li>
+                <li class="nav-active"><a href="#">blog</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- section index video -->
+    <section id="sec-video">
+        <video oncontextmenu="return false;" id="myVideo" autoplay loop>
+            <source src="_src/web/main_video.mp4" type="video/mp4">
+        </video>
+    </section>
     
 </body>
 </html>
