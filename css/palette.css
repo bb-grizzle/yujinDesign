@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* font */
+h1,h2,h3,h4,h5, a{
+    font-size: 1rem;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+p{
+    font-family: 'Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+    font-size: 0.8rem;
+    color: black;
+}
+
