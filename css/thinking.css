@@ -1,18 +1,27 @@
 #sec-thinking{
     padding-top: 97px;
-    display: flex;
     width: 100%;
-    justify-content: space-between;
 
+    display: flex;
+    justify-content: flex-end;
 }
 
-.thinking-video{
-    border: 1px solid black;
+.wrap-thinking{
+    display: flex;
+
 }
 
 .thinking-text{
-    border: 1px solid black;
     width: 338px;
+    margin-left: 80px;
     margin-right: 260px;
+}
 
+.thinking-text h3{
+    margin-bottom: 40px;
+}
+
+
+.thinking-text p{
+    margin-bottom: 30px;
 }
