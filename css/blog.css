@@ -1,37 +1,51 @@
+.posts{
+    padding-top: 50px;
+}
+
 .post{
     padding: 25px 0;
 }
 
-.con-post{
-    width: 70%;
-    height: 50%;
-
-    margin: auto;
-    display: flex;
-    align-items: center;
+.post a{
+    display: inline-block;
+    width: 100%;
 }
 
+.con-post{
+    width: 70%;
+    margin: auto;
 
-.thumbnail img{
-    vertical-align: bottom;
-    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail{
+    background-color: rgb(224, 224, 224);
+    width: 150px;
+    height: 150px;
+}
+
+.post_img{
+    background-image: url("../_src/web/postthumbnail_sample.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .wrap-text{
-    width: 100%;
     position: relative;
+    padding-left: 15px;
+    width: calc(100% - 150px);
     display: flex;
+    flex-wrap: wrap;
 }
 
 .text-head{
-    width: 50%;
-    float: left;
-
     text-align: right;
     padding-right: 18px;
-
     line-height: 30pt;
     font-size: 18pt;
+
+    width: 40%;
 }
 
 .text-head h3, 
@@ -56,14 +70,20 @@
 }
 .text-head p{
     font-size: 14px;
+    font-weight: 400;
 }
 
 .text-body{
-    float: left;
+    width: 60%;
+
     line-height: 30pt;
     font-size: 18pt;
 }
 
 .text-body p span{
     font-weight: bold;
+}
+.text-body p{
+
+    font-weight: 400;
 }
