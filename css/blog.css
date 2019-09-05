@@ -6,6 +6,10 @@
     padding: 25px 0;
 }
 
+.display-none{
+    display: none;
+}
+
 .post a{
     display: inline-block;
     width: 100%;
@@ -17,6 +21,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .thumbnail{

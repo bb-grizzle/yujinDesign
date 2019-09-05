@@ -1,0 +1,9 @@
+# : comments
+
+# no .a files
+
+
+# ignore all files in the build/ directory
+_ppt/
+_rec/
+_src/web/screens

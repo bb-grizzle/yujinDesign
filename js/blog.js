@@ -69,5 +69,6 @@ drawPosts = () => {
     })
 
     posts.querySelectorAll('.post')[0].style.display = "none";
+    posts.classList.remove('display-none');
 }
 
