@@ -41,9 +41,6 @@ drawPosts = () => {
         const url = "https://brunch.co.kr/@arosaegle/" + post.no;
 
         // add child
-        // const test = document.createElement('p')
-        // test.innerHTML = "test";
-        // console.log(test)
         var p = li_post.cloneNode(true);
 
         // get tag from html
@@ -55,7 +52,6 @@ drawPosts = () => {
         const post_summary_first = p.querySelector('.post_summary_first');
         const post_summary_last = p.querySelector('.post_summary_last');
 
-
         post_url.href = url;
         post_img.style.backgroundImage = "url(" + thumb + ")";
         post_title.innerHTML = title;
@@ -65,9 +61,19 @@ drawPosts = () => {
         post_summary_last.innerHTML = "<span>[-1] </span>" + summary_last;
 
         posts.appendChild(p);
-    })
+    });
 
-    posts.querySelectorAll('.post')[0].style.display = "none";
+    posts.querySelectorAll('.post')[0].remove();
     posts.classList.remove('display-none');
+
+    changeSuttitleWidth();
 }
 
+changeSuttitleWidth = () => {
+    const post = document.querySelectorAll('.post');
+    post.forEach(el => {
+        const title = el.querySelector('.post_title');
+        const subtitle = el.querySelector('.post_subtitle');
+        subtitle.style.width = `calc(100% - ${title.clientWidth}px - 4px)`
+    })
+}

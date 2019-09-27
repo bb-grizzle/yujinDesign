@@ -108,6 +108,9 @@
     .con-post{
         width: 90%;
     }
+    .post:first-child{
+        padding-top: 80px;
+    }
     .wrap-text{
         flex-direction: column;
     }
@@ -131,7 +134,7 @@
     }
 
     .wrap-title{
-        min-width: 1200px;
+        width: 100%;
     }
     .wrap-title:after{
         content: "";
@@ -142,11 +145,12 @@
     .post_title, .post_subtitle{
         float: left;
     }
-    .post_title{
-        width: auto;
-    }
+
     .post_subtitle{
-        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
     }
     .post_data{
         width: 100%;

@@ -34,7 +34,7 @@ nav ul{
 }
 
 nav li{
-    /* margin-left: 80px; */
+
 }
 
 .nav-active a{
@@ -48,7 +48,7 @@ nav a{
 }
 
 nav li:last-of-type a{
-    padding: 0;
+    padding-right: 0;
 }
 
 .show-mobile{
@@ -80,15 +80,19 @@ nav li:last-of-type a{
     html{
         font-size: 12px;
     }
+
     header{
         position: fixed;
         z-index: 100;
         height: 56px;
         padding: 0 16px 0 0;
     }
+
     nav a{
         font-size: 1.3rem;
+        padding: 0 2rem;
     }
+
     .header-logo{
         width: 56px;
         height: 56px;

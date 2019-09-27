@@ -116,8 +116,20 @@ makeBodyScroll = () => {
 }
 
 handleClose = () => {
+    scrollToTop();
+    cleanDetail();
     hideDetail();
     makeBodyScroll();
+}
+
+cleanDetail = () => {
+    const con_detail = document.querySelector('.con-detail');
+    con_detail.innerHTML = "";
+}
+
+scrollToTop = () => {
+    const sec_detail = document.querySelector('#sec-detail');
+    sec_detail.scrollTo(0,0);
 }
 
 // hideDetail
