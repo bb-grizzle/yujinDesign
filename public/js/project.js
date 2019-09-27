@@ -7,7 +7,7 @@ let isDetailPage = false;
 
 // get projects
 getPj = () => {
-    return fetch('../src/projects/projects.json')
+    return fetch('./src/projects/projects.json')
     .then(res => res.json())
     .then(data => data.projects)
     .catch(err => console.log(err))
@@ -29,14 +29,14 @@ makePjBg = async () =>{
     const project = document.querySelector('.project');
     const wrap_projects = document.querySelector('.wrap-projects');
 
-    wrap_projects.addEventListener('click', showDetail);
+    wrap_projects.addEventListener('click', handlePortfolioClick);
 
     projects.map(el => {
         let project_clone = project.cloneNode(true);
         project_clone.querySelector('.title').innerHTML = el.title;
         project_clone.querySelector('.descript').innerHTML = el.descript;
 
-        const imageURL = `url(../src/projects/${el.title}/thumbnail.png)`;
+        const imageURL = `url(./src/projects/${el.title}/thumbnail.png)`;
         project_clone.style.backgroundImage = imageURL;
 
         project_clone.contents = el.contents;
@@ -50,7 +50,6 @@ makePjBg = async () =>{
 
     wrap_projects.querySelector('.project').remove();
 
-
     handleHideGuides();
 }
 
@@ -58,6 +57,11 @@ handleHideGuides = () => {
     hidePjGuides_top();
     hidePjGuides_right();
     hidePjGuides_left();
+}
+
+handlePortfolioClick = (e) => {
+    showDetail(e);
+    blockBodyScroll();
 }
 
 // showDetail
@@ -99,7 +103,21 @@ showDetail = (e) => {
         el.className = 'detail-list';
         con_detail.appendChild(el);
     })
+}
 
+blockBodyScroll = () => {
+    const body = document.querySelector('body');
+    body.style.overflow = "hidden";
+}
+
+makeBodyScroll = () => {
+    const body = document.querySelector('body');
+    body.style.overflow = "auto";
+}
+
+handleClose = () => {
+    hideDetail();
+    makeBodyScroll();
 }
 
 // hideDetail
@@ -110,7 +128,7 @@ hideDetail = () => {
 }
 
 const btn_close = document.querySelector('.btn-close');
-btn_close.addEventListener('click', hideDetail);
+btn_close.addEventListener('click', handleClose);
 
 
 

@@ -1,15 +1,21 @@
 @import './palette.css';
 
 /* container */
+.con-default{
+    width: 80%;
+    margin: auto;
+}
 
 /* header */
 header{
     display: flex;
+    width: 100%;
+
     justify-content: space-between;
     align-items: center;
     padding: 0 57px 0 40px;
     height: 200px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* __logo */
@@ -23,14 +29,12 @@ header{
 }
 
 /* __navigation */
-nav{
-}
 nav ul{
     display: flex;
 }
 
 nav li{
-    margin-left: 80px;
+    /* margin-left: 80px; */
 }
 
 .nav-active a{
@@ -38,6 +42,61 @@ nav li{
 }
 nav a{
     opacity: .2;
-    font-size: 36pt;
+    font-size: 2.25rem;
     font-weight: 500;
+    padding: 0 40px;
+}
+
+nav li:last-of-type a{
+    padding: 0;
+}
+
+.show-mobile{
+    display: none;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px)  {
+    html{
+        font-size: 12px;
+    }
+    header{
+        height: 140px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+    .show-mobile{
+        display: block;
+    }
+
+    .none-mobile{
+        display: none;
+    }
+
+    html{
+        font-size: 12px;
+    }
+    header{
+        position: fixed;
+        z-index: 100;
+        height: 56px;
+        padding: 0 16px 0 0;
+    }
+    nav a{
+        font-size: 1.3rem;
+    }
+    .header-logo{
+        width: 56px;
+        height: 56px;
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
 }

@@ -3,7 +3,7 @@
 }
 
 .post{
-    padding: 25px 0;
+    padding: 1.5rem 0;
 }
 
 .display-none{
@@ -37,18 +37,21 @@
 }
 
 .wrap-text{
+
     position: relative;
-    padding-left: 15px;
     width: calc(100% - 150px);
     display: flex;
     flex-wrap: wrap;
+
+    
 }
 
 .text-head{
     text-align: right;
-    padding-right: 18px;
-    line-height: 30pt;
-    font-size: 18pt;
+    padding-right: 10px;
+    
+    line-height: 2.2rem;
+    font-size: 1.12rem;
 
     width: 40%;
 }
@@ -57,38 +60,101 @@
 .text-head h4, 
 .text-head p,
 .text-body p:first-of-type{
-    height: 30pt;
+    height: 2.2rem;
     overflow: hidden;
 } 
 
 .text-body p:last-of-type{
-    height: 60pt;
     overflow: hidden;
 }
 
 .text-head h3{
     font-weight: border;
-    height: 30pt;
+    height: 2.2rem;
 }
 .text-head h4{
     font-weight: 400;
 }
 .text-head p{
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
 .text-body{
+
     width: 60%;
 
-    line-height: 30pt;
-    font-size: 18pt;
+    padding-left: 10px;
+    line-height: 2.2rem;
+    font-size: 1.12rem;
 }
 
 .text-body p span{
     font-weight: bold;
 }
 .text-body p{
-
     font-weight: 400;
 }
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px)  {
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .con-post{
+        width: 90%;
+    }
+    .wrap-text{
+        flex-direction: column;
+    }
+    .text-head, .text-body{
+        width: 100%;
+    }
+    .text-head{
+        padding-left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        overflow: hidden;
+        line-height: 1.5rem;
+    }
+
+    .wrap-title{
+        min-width: 1200px;
+    }
+    .wrap-title:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .post_title, .post_subtitle{
+        float: left;
+    }
+    .post_title{
+        width: auto;
+    }
+    .post_subtitle{
+        margin-left: 0.5rem;
+    }
+    .post_data{
+        width: 100%;
+    }
+
+    .text-head h3, 
+    .text-head h4, 
+    .text-head p,
+    .text-body p{
+        font-size: 0.75rem;
+        height: 1.5rem;
+    }
+
+}
+@media only screen and (max-width: 600px){
+
+}
+    
