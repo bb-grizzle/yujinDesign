@@ -114,6 +114,13 @@
     .text-head, .text-body{
         width: 100%;
     }
+    .thumbnail{
+        width: 80px;
+        height: 80px;
+    }
+    .wrap-text{
+        width: calc(100% - 80px);
+    }
     .text-head{
         padding-left: 10px;
         display: flex;
@@ -124,6 +131,7 @@
     }
 
     .wrap-title{
+        min-width: 1200px;
     }
     .wrap-title:after{
         content: "";
@@ -132,12 +140,13 @@
     }
 
     .post_title, .post_subtitle{
-        
+        float: left;
     }
     .post_title{
         width: auto;
     }
     .post_subtitle{
+        margin-left: 0.5rem;
     }
     .post_data{
         width: 100%;
