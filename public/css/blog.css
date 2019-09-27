@@ -124,7 +124,6 @@
     }
 
     .wrap-title{
-        min-width: 1200px;
     }
     .wrap-title:after{
         content: "";
@@ -133,13 +132,12 @@
     }
 
     .post_title, .post_subtitle{
-        float: left;
+        
     }
     .post_title{
         width: auto;
     }
     .post_subtitle{
-        margin-left: 0.5rem;
     }
     .post_data{
         width: 100%;
