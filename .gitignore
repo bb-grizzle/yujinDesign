@@ -4,6 +4,6 @@
 
 
 # ignore all files in the build/ directory
-_ppt/
+_lec/
 _rec/
 _src/web/screens
